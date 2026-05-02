@@ -3,7 +3,7 @@
 > **Competition:** NPPE-1 Multilingual Sentiment Analysis - Kaggle Community Competition  
 > **Task:** Classify sentiment (Positive / Negative) across 13 Indian languages  
 > **Metric:** Macro F1 Score  
-> **Model:** Gemma 3-1B-IT fine-tuned with QLoRA
+> **Model:** Gemma 3-1B-IT fine-tuned with QLoRA.
 
 ---
 
