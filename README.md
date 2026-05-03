@@ -3,8 +3,8 @@
 > **Competition:** NPPE-2 Multilingual Speech Recognition · Kaggle Community Competition  
 > **Task:** Transcribe audio recordings across English, Hindi, and Tamil  
 > **Metric:** Word Error Rate (WER) - lower is better  
-> **Result:** Ranked **13/190** teams
-
+> **Public Score:** 0.19228 | **Private Score:** 0.19228 | Ranked **13/190** teams
+> **Competition link:** https://www.kaggle.com/t/3a21e1175d3048a686531cc96c197857 
 ---
 
 ## The Problem
