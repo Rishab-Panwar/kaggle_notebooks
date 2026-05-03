@@ -3,7 +3,8 @@
 > **Competition:** NPPE-1 Multilingual Sentiment Analysis - Kaggle Community Competition  
 > **Task:** Classify sentiment (Positive / Negative) across 13 Indian languages  
 > **Metric:** Macro F1 Score  
-> **Model:** Gemma 3-1B-IT fine-tuned with QLoRA.
+> **Model:** Gemma 3-1B-IT fine-tuned with QLoRA  
+> **Public Score:** 1.00 | **Private Score:** 0.9044 | **Final Rank:** 147/209
 
 ---
 
@@ -113,6 +114,26 @@ Per-language accuracy was tracked at baseline to identify which of the 13 langua
 | Optimizer | `paged_adamw_8bit` |
 | Evaluation | `sklearn.metrics.f1_score` (Macro-F1) |
 | Hardware | Kaggle Notebooks, single T4 GPU |
+
+---
+
+## What Went Wrong
+
+The public leaderboard score was 1.00. The private score was 0.9044. Final rank was 147/209.
+
+That gap tells the whole story.
+
+**The public/private split.** Kaggle scored the public leaderboard on roughly 34% of the 100 test samples (about 34 examples) and the private leaderboard on the remaining 66% (about 66 examples). Getting a perfect 1.00 on 34 samples is not a strong signal - with a binary classification task and a reasonable model, it is genuinely possible to nail a sample that small by luck or by the specific examples happening to be easy. The private set, being nearly twice as large and drawn from a different slice of the distribution, exposed the real performance ceiling.
+
+**The dataset was simply too small to trust any single evaluation.** 900 training samples, 100 test samples, 13 languages. The public test slice was probably around 2-3 examples per language. A model can look perfect on that and still be meaningfully wrong on the private slice. There was no way to know from the public score alone.
+
+**The few-shot examples were hand-picked and not validated systematically.** The four few-shot examples in the prompt (Tamil, Bengali, Urdu, Telugu) were chosen qualitatively. They covered four of the 13 languages - the other nine had no in-context example at all. For languages like Bodo and Assamese, which are genuinely low-resource and far from the model's pretraining distribution, those anchors may not have helped much. A better approach would have been to dynamically select few-shot examples per language from the training set rather than using a fixed global set.
+
+**Majority vote may have introduced a systematic bias.** The 3-pass voting (greedy + 2 temperature-0.3 samples) was designed to reduce variance on uncertain predictions. But if the model had a directional bias on certain language/sentiment combinations - for example, consistently predicting Positive for short Odia sentences - the majority vote reinforces that bias rather than correcting it. A single greedy pass at least surfaces the uncertainty; the vote can hide it.
+
+**No per-language validation after fine-tuning.** The post-FT evaluation was on a 200-sample aggregate split, not broken down by language. So it was possible for the adapter to improve overall F1 while actually degrading performance on 2-3 specific languages. Without catching that before submission, those languages would silently pull down the private score.
+
+**The public score of 1.00 was a warning sign, not a green light.** A perfect score on a multilingual classification task with this little data almost certainly means the public split happened to exclude the hard cases. The right response would have been to distrust it and look harder at per-language validation rather than treating it as confirmation the pipeline was solid.
 
 ---
 
