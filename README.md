@@ -4,7 +4,7 @@
 > **Task:** Restore high-quality, high-resolution images from extremely low-light, noisy inputs  
 > **Metric:** RMSE on 100 sampled pixel values - lower is better  
 > **Dataset:** RELLISUR (Real-world Low-Light Super-Resolution)  
-> **Result:** Ranked **1/175** teams
+> **Result:** Ranked **1/175** teams  
 > **Competition link** http://url237.study.iitm.ac.in/ls/click?upn=u001.FrsGe6wgnGFQ7SeE9RgsnS5ky9jTzuECYzWyFGgtxjLWptlL1KoP0lpcRO8bh6L3O1BoRtOj18O4mHwLU7A98VrksPX-2F-2FmooC4Tp5KbgGBU-3Dd7JZ_EiOHenmAz0dvUy0BYPJ4wJqPCzYutKTCDP9ok1l8NJVTvA331eNIUyNfWW4u8D9RxeLdUFDZCOQGskv8ABEFNt-2BgkYXDgR4C66YRuFYtGFg4U13qQX7vXzG7d3mdpL7oFjtgYd7Zd3ay31IJoSnuUnsMOnPlc79iHUUvEFpGlHwncNEtqFoK7Fj8IBFZyktyOAM83KZkp-2BT4rgyldqFI3lXRV-2Fj47MVJEHD18W5TlQY-3D
 
 ---
