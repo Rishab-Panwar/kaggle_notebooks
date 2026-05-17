@@ -4,7 +4,7 @@
 > **Task:** Classify sentiment (Positive / Negative) across 13 Indian languages  
 > **Metric:** Macro F1 Score  
 > **Model:** Gemma 3-1B-IT fine-tuned with QLoRA  
-> **Public Score:** 1.00 | **Private Score:** 0.9044 | **Final Rank:** 147/209
+> **Public Score:** 1.00 | **Private Score:** 0.9044
 
 ---
 
