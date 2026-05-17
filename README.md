@@ -1,6 +1,6 @@
-# System Threat Forecaster - Predicting Malware Infections
+# System Threat Forecaster - Predicting Malware Infections (Machine Learning Approach)
 
-> **Competition:** System Threat Forecaster · Kaggle Competition · MACHINE LEARNING PRACTICE COURSE
+> **Competition:** System Threat Forecaster · Kaggle Competition · Machine Learning Practice Course       
 > **Task:** Predict probability of malware infection based on system telemetry data  
 > **Metric:** Classification Accuracy - higher is better  
 > **Approach:** Gradient Boosting ensemble (LightGBM + CatBoost + XGBoost)  
