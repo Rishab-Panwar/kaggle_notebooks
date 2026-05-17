@@ -8,7 +8,7 @@ Each competition includes a detailed case study covering: the problem, my though
 
 ---
 
-## 🏆 Competitions
+## Competitions
 
 - [Joint Denoising and 4× Super-Resolution on Low-Light Images](https://github.com/Rishab-Panwar/kaggle_notebooks/tree/denoising_4xSR)
 - [Multilingual Sentiment Analysis](https://github.com/Rishab-Panwar/kaggle_notebooks/tree/multilingual_sentiment)
