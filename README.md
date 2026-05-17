@@ -4,7 +4,7 @@
 > **Task:** Predict probability of malware infection based on system telemetry data  
 > **Metric:** Classification Accuracy - higher is better  
 > **Approach:** Gradient Boosting ensemble (LightGBM + CatBoost + XGBoost)  
-> **Result:** Competitive performance through feature engineering and model stacking
+> **Result:** 42/905
 
 ---
 
