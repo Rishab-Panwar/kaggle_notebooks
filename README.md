@@ -1,10 +1,11 @@
-# Image Reconstruction Under Corruption - NAFNet Approach
+# GenAI NPPE - Image Reconstruction Under Corruption
 
 > **Competition:** Mathematical Foundations of GenAI - NPPE (IIT Madras)  
 > **Task:** Reconstruct clean 32×32 RGB images from corrupted inputs with unknown degradation types  
 > **Metric:** Mean Squared Error (MSE) - lower is better  
 > **Approach:** NAFNet (Nonlinear Activation Free Network) with 2-model ensemble  
-> **Result:** Competitive performance through architectural depth and ensemble diversity
+> **Result:** Ranked **16/110** teams  
+> **Competition link:** [GenAI NPPE](https://www.kaggle.com/t/d934bf5c51ae4333a57f433b4bc592d6)
 
 ---
 
